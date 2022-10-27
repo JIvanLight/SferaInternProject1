@@ -188,22 +188,20 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/questionnaires_button"
                 style="@style/Widget.SferaInternProject1.Button1"
-                android:text="@string/questionnaires"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/questionnaires"
                 app:layout_constraintEnd_toStartOf="@+id/people_button"
-                app:layout_constraintStart_toStartOf="@+id/avatar"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/barrierTop3" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/people_button"
                 style="@style/Widget.SferaInternProject1.Button1"
+                android:layout_marginStart="4dp"
                 android:layout_weight="1"
                 android:text="@string/people"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                app:layout_constraintEnd_toEndOf="@+id/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/questionnaires_button"
                 app:layout_constraintTop_toTopOf="@id/barrierTop3" />
 
