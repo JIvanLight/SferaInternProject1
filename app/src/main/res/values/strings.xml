@@ -4,6 +4,6 @@
     <string name="share" translatable="false">SHARE</string>
     <string name="user_name" translatable="false">User Adminov</string>
     <string name="choose">Сhoose</string>
-    <string name="questionnaires">Questionnaires</string>
-    <string name="people">People</string>
+    <string name="questionnaires">QUESTIONNAIRES</string>
+    <string name="people">PEOPLE</string>
 </resources>

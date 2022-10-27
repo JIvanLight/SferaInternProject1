@@ -45,6 +45,8 @@
 
     <style name="TextAppearance.SferaInternProject1.TextButton" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/inter_medium</item>
+        <item name ="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.017</item>
     </style>
 
     <!-- Widgets. -->
