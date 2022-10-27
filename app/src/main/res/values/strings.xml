@@ -3,4 +3,5 @@
     <string name="user_id" translatable="false">ID 123 456 789</string>
     <string name="share" translatable="false">SHARE</string>
     <string name="user_name" translatable="false">User Userovich</string>
+    <string name="choose">Сhoose</string>
 </resources>

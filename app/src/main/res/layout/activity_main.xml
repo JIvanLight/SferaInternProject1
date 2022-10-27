@@ -124,6 +124,26 @@
                 app:layout_constraintTop_toTopOf="@id/icon_place"
                 tools:text="Not specified" />
 
+            <com.google.android.material.button.MaterialButton
+                style="@style/Wiget.SferaInternProject1.TextButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose"
+                app:layout_constraintBottom_toBottomOf="@id/icon_language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/icon_language"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Wiget.SferaInternProject1.TextButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose"
+                app:layout_constraintBottom_toBottomOf="@id/icon_place"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/icon_place"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

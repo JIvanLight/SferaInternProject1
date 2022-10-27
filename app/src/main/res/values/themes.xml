@@ -45,10 +45,13 @@
         <item name="fontFamily">@font/inter_medium</item>
     </style>
 
-    <style name="TextAppearance.SferaInternProject1.TextButton.Choose">
+    <style name="Wiget.SferaInternProject1.TextButton1" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/primary_200</item>
-        <!-- TODO -->
+        <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextBody2</item>
     </style>
+
+
+
 
 
 
