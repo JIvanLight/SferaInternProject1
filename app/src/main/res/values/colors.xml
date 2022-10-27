@@ -15,7 +15,10 @@
     <color name="on_error">#000000</color>
     <color name="surface">#121212</color>
     <color name="on_surface">#FFFFFFDE</color>
+    <color name="on_primary">#DEFFFFFF</color>
     <color name="background">#121212</color>
     <color name="text_color">#FFFFFFDE</color>
+
+    <color name="elevation_04">#17FFFFFF</color>
 
 </resources>

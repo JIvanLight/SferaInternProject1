@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">SferaInternProject1</string>
     <string name="choose">Выбрать</string>
+    <string name="questionnaires">Анкеты</string>
+    <string name="people">Люди</string>
 </resources>
