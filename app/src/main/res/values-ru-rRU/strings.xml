@@ -4,4 +4,5 @@
     <string name="choose">Выбрать</string>
     <string name="questionnaires">Анкеты</string>
     <string name="people">Люди</string>
+    <string name="about_me_hint">Обо мне</string>
 </resources>

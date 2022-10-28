@@ -2,25 +2,28 @@
     <!-- Base application theme. -->
     <style name="Theme.SferaInternProject1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
-        <!-- <item name="colorPrimaryVariant">@color/purple_700</item> -->
+        <item name="colorPrimary">@color/primary_200</item>
         <item name="colorOnPrimary">@color/on_primary</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnSecondary</item>
-        <!-- Customize your theme here. -->
-        <item name="colorPrimaryVariant">@color/primary_200</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
         <item name="colorError">@color/error</item>
         <item name="colorOnError">@color/on_error</item>
-        <item name="colorSurface">@color/surface</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
         <item name="colorPrimarySurface">@color/surface</item>
-        <item name="colorOnSurface">@color/on_surface</item>
         <item name="colorOnBackground">@color/on_surface</item>
         <item name="android:windowBackground">@color/background</item>
-        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textColor">@color/on_surface</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnSecondary</item>
+
+
+
+
+
+
     </style>
 
     <style name="ShapeAppearanceOverlay" parent="">
@@ -47,6 +50,10 @@
         <item name="fontFamily">@font/inter_regular</item>
     </style>
 
+    <style name="TextAppearance.SferaInternProject1.TextCaption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
     <style name="TextAppearance.SferaInternProject1.TextButton" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/inter_medium</item>
         <item name ="android:textStyle">normal</item>
@@ -68,5 +75,26 @@
         <item name="strokeWidth">1dp</item>
         <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextButton</item>
     </style>
+
+    <style name="Widget.SferaInternProject1.InputLayout1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/primary_200</item>
+        <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextCaption</item>
+        <item name="hintTextAppearance">@style/TextAppearance.SferaInternProject1.TextCaption</item>
+        <item name="android:textColorHint">@color/text_medium_emphasis</item>
+        <item name="hintTextColor">@color/on_surface_medium_emphasis</item>
+        <item name="boxStrokeColor">@color/on_surface_medium_emphasis</item>
+
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">@dimen/max_length_about_me</item>
+        <item name="counterTextColor">@color/on_surface_medium_emphasis</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="backgroundTint">@color/background</item>
+    </style>
+
+    <style name="Widget.SferaInternProject1.TextInput1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextSubtitle1</item>
+    </style>
+
 
 </resources>

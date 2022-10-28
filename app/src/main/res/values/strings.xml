@@ -6,4 +6,5 @@
     <string name="choose">Сhoose</string>
     <string name="questionnaires">QUESTIONNAIRES</string>
     <string name="people">PEOPLE</string>
+    <string name="about_me_hint">About me</string>
 </resources>

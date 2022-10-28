@@ -14,10 +14,12 @@
     <color name="on_error">#000000</color>
     <color name="surface">#121212</color>
     <color name="on_surface">#DEFFFFFF</color>
-    <color name="on_primary">#DEFFFFFF</color>
+    <color name="on_primary">#9575CD</color>
     <color name="background">#121212</color>
-    <color name="elevation_04">#17FFFFFF</color>
-    <color name="text_medium_emphasis">99FFFFFF</color>
-    <color name="text_disable">61FFFFFF</color>
+    <color name="on_surface_medium_emphasis">#99FFFFFF</color>
+    <color name="on_surface_disable">#61FFFFFF</color>
 
+    <!-- Elevations -->
+
+    <color name="elevation_04">#17FFFFFF</color>
 </resources>

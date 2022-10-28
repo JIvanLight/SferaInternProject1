@@ -25,10 +25,10 @@
                 android:id="@+id/avatar"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
-                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
                 app:srcCompat="@drawable/ic_elevation_avatar" />
 
@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_add_1"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/avatar"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
                 app:layout_constraintStart_toStartOf="@id/avatar"
@@ -49,13 +50,13 @@
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="@dimen/margin_screen"
-                android:gravity="center"
                 android:ellipsize="end"
-                android:singleLine="true"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
                 app:layout_constraintStart_toStartOf="@id/avatar"
                 app:layout_constraintTop_toBottomOf="@id/avatar"
+                app:singleLine="true"
                 tools:text="@string/user_name" />
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -63,7 +64,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="112dp"
-                android:scaleType="centerCrop"
+                app:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="@id/avatar"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
@@ -97,13 +98,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:gravity="left"
                 android:ellipsize="end"
-                android:singleLine="true"
+                android:gravity="left"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintStart_toEndOf="@id/icon_language"
                 app:layout_constraintTop_toTopOf="@id/icon_language"
+                app:singleLine="true"
                 tools:text="Not specified" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -121,25 +122,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:gravity="left"
                 android:ellipsize="end"
-                android:singleLine="true"
+                android:gravity="start"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_place"
                 app:layout_constraintStart_toEndOf="@id/icon_place"
                 app:layout_constraintTop_toTopOf="@id/icon_place"
+                app:singleLine="true"
                 tools:text="Not specified" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.SferaInternProject1.TextButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/choose"
                 android:layout_weight="1"
+                android:text="@string/choose"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_language"
-                />
+                app:layout_constraintTop_toTopOf="@id/icon_language" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.SferaInternProject1.TextButton1"
@@ -149,8 +149,7 @@
                 android:text="@string/choose"
                 app:layout_constraintBottom_toBottomOf="@id/icon_place"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_place"
-                />
+                app:layout_constraintTop_toTopOf="@id/icon_place" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/barrierTop1"
@@ -170,12 +169,14 @@
                 android:id="@+id/recycler_profile_photo"
                 android:layout_width="match_parent"
                 android:layout_height="113dp"
-                android:scrollbars="horizontal"
+                android:layout_marginStart="@dimen/margin_screen"
+                android:layout_marginEnd="@dimen/margin_screen"
                 android:paddingTop="8dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintTop_toBottomOf="@id/barrierTop2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierTop2"
+                app:scrollbars="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -206,6 +207,28 @@
                 app:layout_constraintStart_toEndOf="@id/questionnaires_button"
                 app:layout_constraintTop_toTopOf="@id/barrierTop3" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/about_me_layout"
+                style="@style/Widget.SferaInternProject1.InputLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/about_me_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/questionnaires_button">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/about_me_text"
+                    style="@style/Widget.SferaInternProject1.TextInput1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_screen"
+                    android:layout_marginEnd="@dimen/margin_screen"
+                    android:gravity="start"
+                    app:breakStrategy="hyphenationFrequency"
+                    app:maxLength="@dimen/max_length_about_me"
+                    tools:text="Here is some information about me." />
+            </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
