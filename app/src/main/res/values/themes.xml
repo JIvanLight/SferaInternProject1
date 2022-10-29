@@ -30,26 +30,32 @@
     <style name="TextAppearance.SferaInternProject1.TextH6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textSize">@dimen/text_h6</item>
         <item name="fontFamily">@font/inter_medium</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextH5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@font/inter_medium</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextBody2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">@font/inter_regular</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextSubtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@font/inter_regular</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextSubtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@font/inter_medium</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextCaption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">@font/inter_regular</item>
+        <item name ="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.SferaInternProject1.TextButton" parent="TextAppearance.MaterialComponents.Button">
