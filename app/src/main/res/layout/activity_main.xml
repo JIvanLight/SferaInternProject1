@@ -329,8 +329,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_chronicles"
-                android:layout_width="360dp"
-                android:layout_height="148dp"
+                android:layout_width="328dp"
+                android:layout_height="106dp"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:layout_marginTop="10dp"
