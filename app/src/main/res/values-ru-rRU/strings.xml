@@ -2,7 +2,9 @@
 <resources>
     <string name="app_name">SferaInternProject1</string>
     <string name="choose">Выбрать</string>
-    <string name="questionnaires">Анкеты</string>
-    <string name="people">Люди</string>
+    <string name="questionnaires">АНКЕТЫ</string>
+    <string name="people">ЛЮДИ</string>
     <string name="about_me_hint">Обо мне</string>
+    <string name="dream">Моменты</string>
+    <string name="wishes">МЕЧТЫ</string>
 </resources>

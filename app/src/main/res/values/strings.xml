@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">SferaInternProject1</string>
-    <string name="user_id" translatable="false">ID 123 456 789</string>
+    <string name="user_id" translatable="false"></string>
     <string name="share" translatable="false">SHARE</string>
     <string name="user_name" translatable="false">User Adminov</string>
     <string name="choose">Сhoose</string>
     <string name="questionnaires">QUESTIONNAIRES</string>
     <string name="people">PEOPLE</string>
     <string name="about_me_hint">About me</string>
+    <string name="dream">Dream and get</string>
+    <string name="wishes">WISHES</string>
+
 </resources>

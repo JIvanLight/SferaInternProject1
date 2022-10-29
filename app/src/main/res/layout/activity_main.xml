@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <include
         android:id="@+id/appBarLayout"
@@ -19,7 +20,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main_screen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/avatar"
@@ -52,10 +55,11 @@
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:ellipsize="end"
                 android:gravity="center"
+                android:maxLength="22"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
                 app:layout_constraintStart_toStartOf="@id/avatar"
-                app:layout_constraintTop_toBottomOf="@id/avatar"
+                app:layout_constraintTop_toBottomOf="@id/barrier1"
                 app:singleLine="true"
                 tools:text="@string/user_name" />
 
@@ -64,13 +68,13 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="112dp"
-                app:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="@id/avatar"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
+                app:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
                 app:srcCompat="@drawable/ic_elevation_statistic" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/statistics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,13 +97,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/language_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:ellipsize="end"
-                android:gravity="left"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintStart_toEndOf="@id/icon_language"
@@ -117,13 +120,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/icon_language" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/place_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:ellipsize="end"
-                android:gravity="start"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_place"
                 app:layout_constraintStart_toEndOf="@id/icon_place"
@@ -139,7 +141,8 @@
                 android:text="@string/choose"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_language" />
+                app:layout_constraintTop_toTopOf="@id/icon_language"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.SferaInternProject1.TextButton1"
@@ -152,14 +155,14 @@
                 app:layout_constraintTop_toTopOf="@id/icon_place" />
 
             <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrierTop1"
+                android:id="@+id/barrier1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="avatar, statistics_shape, statistics, icon_add" />
 
             <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrierTop2"
+                android:id="@+id/barrier2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:barrierDirection="bottom"
@@ -168,44 +171,46 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_photo"
                 android:layout_width="match_parent"
-                android:layout_height="113dp"
+                android:layout_height="@dimen/height_recycler_profile_photo"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:paddingTop="8dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barrierTop2"
+                app:layout_constraintTop_toBottomOf="@id/barrier2"
                 app:scrollbars="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrierTop3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="recycler_profile_photo" />
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/questionnaires_button"
                 style="@style/Widget.SferaInternProject1.Button1"
+                android:layout_width="@dimen/width_button_1"
+                android:layout_height="@dimen/height_button_1"
                 android:layout_marginEnd="4dp"
+                android:layout_marginStart="@dimen/margin_screen"
                 android:layout_weight="1"
                 android:text="@string/questionnaires"
-                app:layout_constraintEnd_toStartOf="@+id/people_button"
+                app:layout_constraintBottom_toBottomOf="@id/people_button"
+                app:layout_constraintEnd_toStartOf="@id/people_button"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/barrierTop3" />
+                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/people_button"
                 style="@style/Widget.SferaInternProject1.Button1"
+                android:layout_width="@dimen/width_button_1"
+                android:layout_height="@dimen/height_button_1"
                 android:layout_marginStart="4dp"
+                android:layout_marginEnd="@dimen/margin_screen"
                 android:layout_weight="1"
                 android:text="@string/people"
+                app:layout_constraintBottom_toBottomOf="@id/questionnaires_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/questionnaires_button"
-                app:layout_constraintTop_toTopOf="@id/barrierTop3" />
+                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/about_me_layout"
@@ -222,13 +227,55 @@
                     style="@style/Widget.SferaInternProject1.TextInput1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_screen"
-                    android:layout_marginEnd="@dimen/margin_screen"
                     android:gravity="start"
                     app:breakStrategy="hyphenationFrequency"
                     app:maxLength="@dimen/max_length_about_me"
                     tools:text="Here is some information about me." />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="about_me_layout" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dream_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_screen"
+                android:layout_marginTop="12dp"
+                android:text="@string/dream"
+                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/dream_switch"
+                style="@style/Widget.SferaInternProject1.Switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/margin_screen"
+                app:layout_constraintBottom_toBottomOf="@+id/dream_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/wishes_button"
+                style="@style/Widget.SferaInternProject1.Button1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button_1"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="@dimen/margin_screen"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:text="@string/wishes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dream_text" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

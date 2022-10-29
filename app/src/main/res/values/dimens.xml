@@ -9,6 +9,7 @@
     <dimen name="width_button_1">160dp</dimen>
     <dimen name="height_button_1">48dp</dimen>
     <dimen name="max_length_about_me">300</dimen>
+    <dimen name="height_recycler_profile_photo">113dp</dimen>
 
 
 </resources>
