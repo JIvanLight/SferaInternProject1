@@ -336,12 +336,12 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 android:scrollbars="vertical"
+                app:layout_constraintDimensionRatio="1:1"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/chronicles_text"
-                app:spanCount="3"
-                >
+                app:spanCount="3">
             </androidx.recyclerview.widget.RecyclerView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
