@@ -169,7 +169,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_photo"
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_height="113dp"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="20dp"
@@ -178,7 +178,9 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barrier2">
+                app:layout_constraintTop_toBottomOf="@id/barrier2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_recycler_profile_photo">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -269,7 +271,7 @@
                 android:layout_height="@dimen/height_button_1"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="@dimen/margin_screen"
                 android:layout_weight="1"
                 android:text="@string/wishes"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -25,6 +25,11 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="ShapeAppearance.SferaInternProject1.RoundedCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
     <!-- Text Appearance. -->
 
     <style name="TextAppearance.SferaInternProject1.TextH6" parent="TextAppearance.MaterialComponents.Headline6">
