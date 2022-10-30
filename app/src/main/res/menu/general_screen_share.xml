@@ -7,5 +7,4 @@
         android:icon="@drawable/ic_icon_share"
         android:title="@string/share"
         app:showAsAction="ifRoom" />
-
 </menu>

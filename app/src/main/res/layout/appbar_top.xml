@@ -5,28 +5,27 @@
     android:id="@+id/appBar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
     android:paddingStart="0dp"
     android:paddingEnd="0dp"
-    android:background="?attr/colorSurface"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolBar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorSurface"
         app:menu="@menu/general_screen_share"
-        app:navigationIcon="@drawable/ic_nav_menu"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary">
+        app:navigationIcon="@drawable/ic_nav_menu">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/toolbar_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_id"
-        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
-        tools:text="ID 123 456 789"
-        />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_id"
+            android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
+            tools:text="ID 123 456 789" />
     </com.google.android.material.appbar.MaterialToolbar>
 
 </com.google.android.material.appbar.AppBarLayout>

@@ -169,16 +169,18 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="113dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintDimensionRatio="3:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/barrier2"
+                tools:ignore="SpeakableTextPresentCheck"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_recycler_profile_photo">
 
@@ -212,7 +214,8 @@
                 app:layout_constraintBottom_toBottomOf="@id/questionnaires_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/questionnaires_button"
-                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo" />
+                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo"
+                tools:ignore="TextContrastCheck" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/about_me_layout"
@@ -292,18 +295,19 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_moments"
-                android:layout_width="360dp"
-                android:layout_height="148dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:orientation="horizontal"
-                android:scrollbars="vertical"
+                app:layout_constraintDimensionRatio="2:1"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/moments_text">
-
+                app:layout_constraintTop_toBottomOf="@id/moments_text"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_recycler_profile_moments">
             </androidx.recyclerview.widget.RecyclerView>
 
             <androidx.constraintlayout.widget.Barrier
@@ -327,8 +331,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_profile_chronicles"
-                android:layout_width="328dp"
-                android:layout_height="106dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/margin_screen"
@@ -339,7 +343,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/chronicles_text"
-                app:spanCount="3">
+                app:spanCount="3"
+                tools:itemCount="12"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_recycler_profile_chronicles">
 
             </androidx.recyclerview.widget.RecyclerView>
 
