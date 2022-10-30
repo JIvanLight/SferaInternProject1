@@ -96,7 +96,7 @@
         <item name="boxStrokeColor">@color/on_surface_medium_emphasis</item>
         <item name="boxBackgroundColor">@color/surface</item>
         <item name="counterEnabled">true</item>
-        <item name="counterMaxLength">@dimen/max_length_about_me</item>
+        <item name="counterMaxLength">300</item>
         <item name="counterTextColor">@color/on_surface_medium_emphasis</item>
         <item name="endIconMode">clear_text</item>
         <item name="backgroundTint">@color/background</item>

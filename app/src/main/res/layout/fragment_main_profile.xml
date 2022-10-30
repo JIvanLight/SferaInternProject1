@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
                 app:srcCompat="@drawable/ic_elevation_avatar"
-                tools:src="@drawable/fdvfd" />
+                android:src="@drawable/fdvfd" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_add"
@@ -60,7 +60,7 @@
                 app:layout_constraintStart_toStartOf="@id/avatar"
                 app:layout_constraintTop_toBottomOf="@id/barrier1"
                 app:singleLine="true"
-                tools:text="@string/user_name" />
+                android:text="@string/user_name" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/statistics_shape"
@@ -84,7 +84,7 @@
                 app:layout_constraintEnd_toEndOf="@id/statistics_shape"
                 app:layout_constraintStart_toStartOf="@id/statistics_shape"
                 app:layout_constraintTop_toTopOf="@id/statistics_shape"
-                tools:text="5.0" />
+                android:text="5.0" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_language"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toEndOf="@id/icon_language"
                 app:layout_constraintTop_toTopOf="@id/icon_language"
                 app:singleLine="true"
-                tools:text="Not specified" />
+                android:text="@string/language_str" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_place"
@@ -130,9 +130,10 @@
                 app:layout_constraintStart_toEndOf="@id/icon_place"
                 app:layout_constraintTop_toTopOf="@id/icon_place"
                 app:singleLine="true"
-                tools:text="Not specified" />
+                android:text="@string/language_str" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/choose_text_button_1"
                 style="@style/Widget.SferaInternProject1.TextButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,6 +145,7 @@
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/choose_text_button_2"
                 style="@style/Widget.SferaInternProject1.TextButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -230,9 +232,8 @@
                     style="@style/Widget.SferaInternProject1.TextInput1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:maxLength="@dimen/max_length_about_me"
-                    tools:text="Here is some information about me." />
+                    android:text="@string/about_me_text"
+                    android:gravity="start" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.Barrier
