@@ -26,10 +26,10 @@
                 android:id="@+id/avatar"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
                 app:srcCompat="@drawable/ic_elevation_avatar"
                 tools:src="@drawable/fdvfd" />
@@ -67,9 +67,9 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="112dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="@id/avatar"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
-                app:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
                 app:srcCompat="@drawable/ic_elevation_statistic" />
 
@@ -182,9 +182,7 @@
                 app:layout_constraintTop_toBottomOf="@id/barrier2"
                 tools:ignore="SpeakableTextPresentCheck"
                 tools:itemCount="4"
-                tools:listitem="@layout/item_recycler_profile_photo">
-
-            </androidx.recyclerview.widget.RecyclerView>
+                tools:listitem="@layout/item_recycler_profile_photo" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/questionnaires_button"
@@ -233,8 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
-                    app:breakStrategy="hyphenationFrequency"
-                    app:maxLength="@dimen/max_length_about_me"
+                    android:maxLength="@dimen/max_length_about_me"
                     tools:text="Here is some information about me." />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -301,14 +298,13 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/margin_screen"
                 android:orientation="horizontal"
-                app:layout_constraintDimensionRatio="2:1"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintDimensionRatio="2:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/moments_text"
                 tools:itemCount="5"
-                tools:listitem="@layout/item_recycler_profile_moments">
-            </androidx.recyclerview.widget.RecyclerView>
+                tools:listitem="@layout/item_recycler_profile_moments" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/barrier4"
@@ -355,8 +351,3 @@
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
-
-
-
-
-
