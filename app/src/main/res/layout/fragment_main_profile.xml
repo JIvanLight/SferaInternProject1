@@ -233,7 +233,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/about_me_text"
-                    android:gravity="start" />
+                    android:gravity="start"
+
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.Barrier

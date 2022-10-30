@@ -20,6 +20,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnSecondary</item>
     </style>
 
+    <!-- Other themes -->
+
+    <!-- Shape Appearance -->
+
     <style name="ShapeAppearanceOverlay" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -30,7 +34,7 @@
         <item name="cornerSize">4dp</item>
     </style>
 
-    <!-- Text Appearance. -->
+    <!-- Text Appearance -->
 
     <style name="TextAppearance.SferaInternProject1.TextH6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textSize">@dimen/text_h6</item>
@@ -69,7 +73,7 @@
         <item name="android:letterSpacing">0.017</item>
     </style>
 
-    <!-- Widgets. -->
+    <!-- Widgets -->
 
     <style name="Widget.SferaInternProject1.TextButton1" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/primary_200</item>
@@ -93,20 +97,25 @@
         <item name="hintTextAppearance">@style/TextAppearance.SferaInternProject1.TextCaption</item>
         <item name="android:textColorHint">@color/on_surface_medium_emphasis</item>
         <item name="hintTextColor">@color/on_surface_medium_emphasis</item>
-        <item name="boxStrokeColor">@color/on_surface_medium_emphasis</item>
         <item name="boxBackgroundColor">@color/surface</item>
         <item name="counterEnabled">true</item>
         <item name="counterMaxLength">300</item>
         <item name="counterTextColor">@color/on_surface_medium_emphasis</item>
         <item name="endIconMode">clear_text</item>
         <item name="backgroundTint">@color/background</item>
+        <item name="colorOnSurface">@color/on_primary</item>
+        <item name="android:layout_marginStart">@dimen/margin_screen</item>
+        <item name="android:layout_marginEnd">@dimen/margin_screen</item>
     </style>
 
     <style name="Widget.SferaInternProject1.TextInput1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:textColor">@color/on_surface</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
         <item name="android:textAppearance">
             @style/TextAppearance.SferaInternProject1.TextSubtitle1
         </item>
+
     </style>
 
     <style name="Widget.SferaInternProject1.Switch1" parent="Widget.MaterialComponents.CompoundButton.Switch">
