@@ -27,12 +27,12 @@
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/fdvfd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
-                app:srcCompat="@drawable/ic_elevation_avatar"
-                android:src="@drawable/fdvfd" />
+                app:srcCompat="@drawable/ic_elevation_avatar" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_add"
@@ -55,12 +55,12 @@
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLength="22"
+                android:text="@string/user_name"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
                 app:layout_constraintEnd_toEndOf="@id/avatar"
                 app:layout_constraintStart_toStartOf="@id/avatar"
                 app:layout_constraintTop_toBottomOf="@id/barrier1"
-                app:singleLine="true"
-                android:text="@string/user_name" />
+                app:singleLine="true" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/statistics_shape"
@@ -79,12 +79,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:maxLength="3"
+                android:text="5.0"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH5"
                 app:layout_constraintBottom_toBottomOf="@id/statistics_shape"
                 app:layout_constraintEnd_toEndOf="@id/statistics_shape"
                 app:layout_constraintStart_toStartOf="@id/statistics_shape"
-                app:layout_constraintTop_toTopOf="@id/statistics_shape"
-                android:text="5.0" />
+                app:layout_constraintTop_toTopOf="@id/statistics_shape" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_language"
@@ -102,12 +102,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:ellipsize="end"
+                android:text="@string/language_str"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintStart_toEndOf="@id/icon_language"
                 app:layout_constraintTop_toTopOf="@id/icon_language"
-                app:singleLine="true"
-                android:text="@string/language_str" />
+                app:singleLine="true" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_place"
@@ -125,12 +125,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:ellipsize="end"
+                android:text="@string/language_str"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
                 app:layout_constraintBottom_toBottomOf="@id/icon_place"
                 app:layout_constraintStart_toEndOf="@id/icon_place"
                 app:layout_constraintTop_toTopOf="@id/icon_place"
-                app:singleLine="true"
-                android:text="@string/language_str" />
+                app:singleLine="true" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/choose_text_button_1"
@@ -232,8 +232,8 @@
                     style="@style/Widget.SferaInternProject1.TextInput1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/about_me_text"
                     android:gravity="start"
+                    android:text="@string/about_me_text"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
