@@ -230,10 +230,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/about_me_text"
                     style="@style/Widget.SferaInternProject1.TextInput1"
-                    android:maxLength="300"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
+                    android:maxLength="300"
                     android:text="@string/about_me_text"
 
                     />
@@ -301,9 +301,9 @@
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="@dimen/margin_screen"
+                android:orientation="horizontal"
                 android:paddingStart="@dimen/margin_screen"
                 android:paddingTop="8dp"
-                android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -337,8 +337,8 @@
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="@dimen/margin_screen"
-                android:paddingTop="8dp"
                 android:orientation="vertical"
+                android:paddingTop="8dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
