@@ -12,6 +12,6 @@
     <string name="wishes">WISHES</string>
     <string name="moments">Moments</string>
     <string name="chronicles">Chronicles</string>
-    <string name="language_str" translatable="false">Not specified</string>
+    <string name="language_str">Not specified</string>
 
 </resources>

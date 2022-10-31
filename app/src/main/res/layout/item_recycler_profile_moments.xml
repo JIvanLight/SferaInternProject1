@@ -3,16 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/profile_moments_layout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="4dp">
+    android:layout_width="79dp"
+    android:layout_height="140dp">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profile_moments_view"
-        android:layout_width="79dp"
-        android:layout_height="140dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/pot"
+        android:src="@drawable/pot2"
         android:paddingEnd="4dp"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.SferaInternProject1.RoundedCorner"
         app:layout_constraintBottom_toBottomOf="parent"
