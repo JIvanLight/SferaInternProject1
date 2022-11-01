@@ -21,4 +21,8 @@
     <!-- Elevations -->
 
     <color name="elevation_04">#17FFFFFF</color>
+
+    <!-- -->
+
+    <color name="divider_line1">#1AFFFFFF</color>
 </resources>

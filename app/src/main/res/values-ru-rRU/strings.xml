@@ -10,4 +10,6 @@
     <string name="moments">Моменты</string>
     <string name="chronicles">Хроники</string>
     <string name="language_str">Не указано</string>
+    <string name="people_appbar">Люди</string>
+    <string name="subscribe">Подписаться</string>
 </resources>

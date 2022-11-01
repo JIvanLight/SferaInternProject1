@@ -2,7 +2,6 @@
 <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/appBar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorSurface"
@@ -27,5 +26,4 @@
             android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
             tools:text="ID 123 456 789" />
     </com.google.android.material.appbar.MaterialToolbar>
-
 </com.google.android.material.appbar.AppBarLayout>

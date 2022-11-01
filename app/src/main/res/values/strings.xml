@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">SferaInternProject1</string>
     <string name="user_id" translatable="false">ID 123 456 789</string>
+    <string name="statistics" translatable="false">5.0</string>
     <string name="share" translatable="false">SHARE</string>
+    <string name="search" translatable="false">SEARCH</string>
     <string name="user_name" translatable="false">User Adminov</string>
     <string name="choose">Сhoose</string>
     <string name="questionnaires">QUESTIONNAIRES</string>
@@ -13,5 +15,7 @@
     <string name="moments">Moments</string>
     <string name="chronicles">Chronicles</string>
     <string name="language_str">Not specified</string>
+    <string name="people_appbar">People</string>
+    <string name="subscribe">Subscribe</string>
 
 </resources>

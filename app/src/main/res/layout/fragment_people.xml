@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolBarPeopleInc"
+        layout="@layout/appbar_people_light" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_people"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/toolBarPeopleInc"
+        android:layout_marginLeft="@dimen/margin_screen"
+        android:layout_marginRight="@dimen/margin_screen">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

@@ -9,8 +9,8 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/appBarLayout"
-        layout="@layout/appbar_top" />
+        android:id="@+id/appBarMain"
+        layout="@layout/appbar_main_dark" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,8 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main_screen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:layout_height="match_parent">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/avatar"
@@ -79,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:maxLength="3"
-                android:text="5.0"
+                android:text="@string/statistics"
                 android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH5"
                 app:layout_constraintBottom_toBottomOf="@id/statistics_shape"
                 app:layout_constraintEnd_toEndOf="@id/statistics_shape"
@@ -138,11 +137,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="end | center"
                 android:text="@string/choose"
                 app:layout_constraintBottom_toBottomOf="@id/icon_language"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_language"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toTopOf="@id/icon_language" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/choose_text_button_2"
@@ -150,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="end | center"
                 android:text="@string/choose"
                 app:layout_constraintBottom_toBottomOf="@id/icon_place"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +194,6 @@
                 android:layout_marginStart="@dimen/margin_screen"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="4dp"
-                android:layout_weight="1"
                 android:text="@string/questionnaires"
                 app:layout_constraintBottom_toBottomOf="@id/people_button"
                 app:layout_constraintEnd_toStartOf="@id/people_button"
@@ -209,7 +208,6 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="@dimen/margin_screen"
-                android:layout_weight="1"
                 android:text="@string/people"
                 app:layout_constraintBottom_toBottomOf="@id/questionnaires_button"
                 app:layout_constraintEnd_toEndOf="parent"
