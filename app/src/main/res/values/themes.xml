@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.SferaInternProject1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.SferaInternProject1" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_200</item>
         <item name="colorOnPrimary">@color/on_primary</item>
@@ -78,6 +78,7 @@
 
     <style name="Widget.SferaInternProject1.TextButton1" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/primary_200</item>
+        <item name="android:layout_marginEnd">@dimen/margin_screen</item>
         <item name="rippleColor">@color/surface</item>
         <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextBody2
         </item>
@@ -92,7 +93,7 @@
         </item>
     </style>
 
-    <style name="Widget.SferaInternProject1.InputLayout1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+    <style name="Widget.SferaInternProject1.InputLayout1" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:textColor">@color/primary_200</item>
         <item name="android:textAppearance">@style/TextAppearance.SferaInternProject1.TextCaption
         </item>
@@ -106,8 +107,7 @@
         <item name="backgroundTint">@color/background</item>
         <item name="colorOnSurface">@color/on_primary</item>
         <item name="counterTextColor">@color/on_surface_medium_emphasis</item>
-        <item name="android:layout_marginStart">@dimen/margin_screen</item>
-        <item name="android:layout_marginEnd">@dimen/margin_screen</item>
+
     </style>
 
     <style name="Widget.SferaInternProject1.TextInput1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
