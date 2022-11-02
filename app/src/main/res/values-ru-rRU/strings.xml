@@ -12,4 +12,5 @@
     <string name="language_str">Не указано</string>
     <string name="people_appbar">Люди</string>
     <string name="subscribe">Подписаться</string>
+    <string name="unsubscribe">Отписаться</string>
 </resources>

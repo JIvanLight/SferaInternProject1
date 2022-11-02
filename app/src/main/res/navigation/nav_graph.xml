@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainProfileFragment">
+    <fragment
+        android:id="@+id/mainProfileFragment"
+        android:name="ru.jivan.sferainternproject1.UI.MainProfileFragment"
+        android:label="MainProfileFragment" >
+        <action
+            android:id="@+id/action_mainProfileFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="ru.jivan.sferainternproject1.UI.PeopleFragment"
+        android:label="PeopleFragment" />
+</navigation>

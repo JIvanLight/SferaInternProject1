@@ -1,356 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_screen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/appBarMain"
-        layout="@layout/appbar_main_dark" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fdvfd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
+        app:srcCompat="@drawable/ic_elevation_avatar" />
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_add"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLength="22"
+        android:text="@string/user_name"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/barrier1"
+        app:singleLine="true" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/main_screen"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/statistics_shape"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="112dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
+        app:srcCompat="@drawable/ic_elevation_statistic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/statistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:maxLength="3"
+        android:text="@string/statistics"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH5"
+        app:layout_constraintBottom_toBottomOf="@id/statistics_shape"
+        app:layout_constraintEnd_toEndOf="@id/statistics_shape"
+        app:layout_constraintStart_toStartOf="@id/statistics_shape"
+        app:layout_constraintTop_toTopOf="@id/statistics_shape" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/ic_language_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/language_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:text="@string/language_str"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
+        app:layout_constraintBottom_toBottomOf="@id/icon_language"
+        app:layout_constraintStart_toEndOf="@id/icon_language"
+        app:layout_constraintTop_toTopOf="@id/icon_language"
+        app:singleLine="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/ic_place_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_language" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/place_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:text="@string/language_str"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
+        app:layout_constraintBottom_toBottomOf="@id/icon_place"
+        app:layout_constraintStart_toEndOf="@id/icon_place"
+        app:layout_constraintTop_toTopOf="@id/icon_place"
+        app:singleLine="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/choose_text_button_1"
+        style="@style/Widget.SferaInternProject1.TextButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end | center"
+        android:text="@string/choose"
+        app:layout_constraintBottom_toBottomOf="@id/icon_language"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_language" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/choose_text_button_2"
+        style="@style/Widget.SferaInternProject1.TextButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end | center"
+        android:text="@string/choose"
+        app:layout_constraintBottom_toBottomOf="@id/icon_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_place" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="avatar, statistics_shape, statistics, icon_add" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="place_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_profile_photo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier2"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_recycler_profile_photo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/questionnaires_button"
+        style="@style/Widget.SferaInternProject1.Button1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_button_1"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/questionnaires"
+        app:layout_constraintBottom_toBottomOf="@id/people_button"
+        app:layout_constraintEnd_toStartOf="@id/people_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/people_button"
+        style="@style/Widget.SferaInternProject1.Button1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_button_1"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:text="@string/people"
+        app:layout_constraintBottom_toBottomOf="@id/questionnaires_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/questionnaires_button"
+        app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/about_me_layout"
+        style="@style/Widget.SferaInternProject1.InputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/about_me_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionnaires_button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/about_me_text"
+            style="@style/Widget.SferaInternProject1.TextInput1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxLength="300"
+            android:text="@string/about_me_text"
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/avatar"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/fdvfd"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
-                app:srcCompat="@drawable/ic_elevation_avatar" />
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/icon_add"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_add_1"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="@id/avatar"
-                app:layout_constraintEnd_toEndOf="@id/avatar"
-                app:layout_constraintStart_toStartOf="@id/avatar"
-                app:layout_constraintTop_toTopOf="@id/avatar" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="about_me_layout" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/user_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLength="22"
-                android:text="@string/user_name"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH6"
-                app:layout_constraintEnd_toEndOf="@id/avatar"
-                app:layout_constraintStart_toStartOf="@id/avatar"
-                app:layout_constraintTop_toBottomOf="@id/barrier1"
-                app:singleLine="true" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dream_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="20dp"
+        android:text="@string/dream"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/statistics_shape"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="112dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="@id/avatar"
-                app:layout_constraintEnd_toEndOf="@id/avatar"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
-                app:srcCompat="@drawable/ic_elevation_statistic" />
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/dream_switch"
+        style="@style/Widget.SferaInternProject1.Switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/dream_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/statistics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal"
-                android:maxLength="3"
-                android:text="@string/statistics"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextH5"
-                app:layout_constraintBottom_toBottomOf="@id/statistics_shape"
-                app:layout_constraintEnd_toEndOf="@id/statistics_shape"
-                app:layout_constraintStart_toStartOf="@id/statistics_shape"
-                app:layout_constraintTop_toTopOf="@id/statistics_shape" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wishes_button"
+        style="@style/Widget.SferaInternProject1.Button1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button_1"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:layout_weight="1"
+        android:text="@string/wishes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dream_switch" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/icon_language"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="21dp"
-                android:src="@drawable/ic_language_24px"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/moments_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="18dp"
+        android:text="@string/moments"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle2"
+        android:textColor="@color/primary_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wishes_button" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/language_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:ellipsize="end"
-                android:text="@string/language_str"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
-                app:layout_constraintBottom_toBottomOf="@id/icon_language"
-                app:layout_constraintStart_toEndOf="@id/icon_language"
-                app:layout_constraintTop_toTopOf="@id/icon_language"
-                app:singleLine="true" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_profile_moments"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_screen"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moments_text"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_recycler_profile_moments" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/icon_place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="21dp"
-                android:src="@drawable/ic_place_24px"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/icon_language" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="recycler_profile_moments" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/place_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:ellipsize="end"
-                android:text="@string/language_str"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextBody2"
-                app:layout_constraintBottom_toBottomOf="@id/icon_place"
-                app:layout_constraintStart_toEndOf="@id/icon_place"
-                app:layout_constraintTop_toTopOf="@id/icon_place"
-                app:singleLine="true" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/chronicles_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="18dp"
+        android:text="@string/chronicles"
+        android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle2"
+        android:textColor="@color/primary_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_profile_moments" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/choose_text_button_1"
-                style="@style/Widget.SferaInternProject1.TextButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end | center"
-                android:text="@string/choose"
-                app:layout_constraintBottom_toBottomOf="@id/icon_language"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_language" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_profile_chronicles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/margin_screen"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chronicles_text"
+        app:spanCount="3"
+        tools:itemCount="12"
+        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_recycler_profile_chronicles">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/choose_text_button_2"
-                style="@style/Widget.SferaInternProject1.TextButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end | center"
-                android:text="@string/choose"
-                app:layout_constraintBottom_toBottomOf="@id/icon_place"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/icon_place" />
+    </androidx.recyclerview.widget.RecyclerView>
 
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrier1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="avatar, statistics_shape, statistics, icon_add" />
-
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrier2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="place_text" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_profile_photo"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintDimensionRatio="3:1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barrier2"
-                tools:ignore="SpeakableTextPresentCheck"
-                tools:itemCount="4"
-                tools:listitem="@layout/item_recycler_profile_photo" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/questionnaires_button"
-                style="@style/Widget.SferaInternProject1.Button1"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/height_button_1"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="4dp"
-                android:text="@string/questionnaires"
-                app:layout_constraintBottom_toBottomOf="@id/people_button"
-                app:layout_constraintEnd_toStartOf="@id/people_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/people_button"
-                style="@style/Widget.SferaInternProject1.Button1"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/height_button_1"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:text="@string/people"
-                app:layout_constraintBottom_toBottomOf="@id/questionnaires_button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/questionnaires_button"
-                app:layout_constraintTop_toBottomOf="@id/recycler_profile_photo"
-                tools:ignore="TextContrastCheck" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/about_me_layout"
-                style="@style/Widget.SferaInternProject1.InputLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/about_me_hint"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/questionnaires_button">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/about_me_text"
-                    style="@style/Widget.SferaInternProject1.TextInput1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:maxLength="300"
-                    android:text="@string/about_me_text"
-
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrier3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="about_me_layout" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/dream_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="20dp"
-                android:text="@string/dream"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barrier3" />
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/dream_switch"
-                style="@style/Widget.SferaInternProject1.Switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                app:layout_constraintBottom_toBottomOf="@+id/dream_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barrier3" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/wishes_button"
-                style="@style/Widget.SferaInternProject1.Button1"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/height_button_1"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:layout_weight="1"
-                android:text="@string/wishes"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dream_switch" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/moments_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="18dp"
-                android:text="@string/moments"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle2"
-                android:textColor="@color/primary_200"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wishes_button" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_profile_moments"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:orientation="horizontal"
-                android:paddingStart="@dimen/margin_screen"
-                android:paddingTop="8dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/moments_text"
-                tools:itemCount="5"
-                tools:listitem="@layout/item_recycler_profile_moments" />
-
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrier4"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="recycler_profile_moments" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/chronicles_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="18dp"
-                android:text="@string/chronicles"
-                android:textAppearance="@style/TextAppearance.SferaInternProject1.TextSubtitle2"
-                android:textColor="@color/primary_200"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycler_profile_moments" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_profile_chronicles"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_screen"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="@dimen/margin_screen"
-                android:orientation="vertical"
-                android:paddingTop="8dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/chronicles_text"
-                app:spanCount="3"
-                tools:itemCount="12"
-                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/item_recycler_profile_chronicles">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

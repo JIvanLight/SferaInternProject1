@@ -28,6 +28,4 @@ class ProfileMomentsAdapter() : ListAdapter<Int, ProfileMomentsAdapter.MomentsVi
         override fun areContentsTheSame(oldItem: Int, newItem: Int): Boolean =
             oldItem == newItem
     }
-
-
 }

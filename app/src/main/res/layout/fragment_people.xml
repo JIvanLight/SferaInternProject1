@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
-    <include
-        android:id="@+id/toolBarPeopleInc"
-        layout="@layout/appbar_people_light" />
+    android:fitsSystemWindows="true"
+    android:layout_marginStart="@dimen/margin_screen"
+    android:layout_marginEnd="@dimen/margin_screen_8">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_people"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/toolBarPeopleInc"
-        android:layout_marginLeft="@dimen/margin_screen"
-        android:layout_marginRight="@dimen/margin_screen">
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
