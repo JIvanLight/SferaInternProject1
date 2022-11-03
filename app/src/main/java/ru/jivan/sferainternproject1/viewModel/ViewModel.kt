@@ -13,6 +13,4 @@ class ViewModel: ViewModel(), UserInteractiveListener {
     override fun onPeopleClicked() {
 
     }
-
-
 }

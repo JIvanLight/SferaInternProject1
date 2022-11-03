@@ -27,14 +27,23 @@ class PeopleAdapter(private val interactionListener: UserInteractiveListener) :
 
         private lateinit var user: User
 
-        private val stateButtonSub = binding.root.context.getString(R.string.subscribe)
-        private val stateButtonUnsub = binding.root.context.getString(R.string.unsubscribe)
+        private val context = binding.root.context
+        private val stateTextButtonSub = context.getString(R.string.subscribe)
+        private val stateTextButtonUnsub = context.getString(R.string.unsubscribe)
+        private val stateTextColorButtonSub = context.getColor(R.color.on_primary)
+        private val stateTextColorButtonUnsub = context.getColor(R.color.on_surface_medium_emphasis)
 
         init {
             binding.subscribeTextButton.setOnClickListener {
                 when(binding.subscribeTextButton.text){
-                    stateButtonSub -> binding.subscribeTextButton.text = stateButtonUnsub
-                    stateButtonUnsub -> binding.subscribeTextButton.text = stateButtonSub
+                    stateTextButtonSub -> {
+                        binding.subscribeTextButton.text = stateTextButtonUnsub
+                        binding.subscribeTextButton.setTextColor(stateTextColorButtonUnsub)
+                    }
+                    stateTextButtonUnsub -> {
+                        binding.subscribeTextButton.text = stateTextButtonSub
+                        binding.subscribeTextButton.setTextColor(stateTextColorButtonSub)
+                    }
                 }
             }
         }
