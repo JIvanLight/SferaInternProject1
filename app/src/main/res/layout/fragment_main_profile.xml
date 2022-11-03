@@ -232,9 +232,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="start"
                     android:maxLength="300"
-                    android:text="@string/about_me_text"
-
-                    />
+                    android:text="@string/about_me_text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.Barrier

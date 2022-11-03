@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
-import ru.jivan.sferainternproject1.R
 import ru.jivan.sferainternproject1.adapters.PeopleAdapter
 import ru.jivan.sferainternproject1.databinding.FragmentPeopleBinding
 import ru.jivan.sferainternproject1.viewModel.ViewModel

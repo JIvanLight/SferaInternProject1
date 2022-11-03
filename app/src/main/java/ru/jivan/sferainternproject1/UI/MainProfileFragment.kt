@@ -2,10 +2,14 @@ package ru.jivan.sferainternproject1.UI
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.content.res.AppCompatResources.getColorStateList
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import ru.jivan.sferainternproject1.R
 import ru.jivan.sferainternproject1.adapters.*
 import ru.jivan.sferainternproject1.databinding.FragmentMainProfileBinding
@@ -42,13 +46,13 @@ class MainProfileFragment: Fragment() {
             }
         }
 
-        val dividerItemDecoration = ItemDecorationAlbumColumns(
+        val dividerItemDecorationForChronicles = ItemDecorationAlbumColumns(
             resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
             resources.getInteger(R.integer.photo_list_preview_columns)
         )
 
         val adapterChronicles = ProfileChroniclesAdapter()
-        binding.recyclerProfileChronicles.addItemDecoration(dividerItemDecoration)
+        binding.recyclerProfileChronicles.addItemDecoration(dividerItemDecorationForChronicles)
         binding.recyclerProfileChronicles.layoutManager = gridLayoutManagerForChroniclesAdapter
         binding.recyclerProfileChronicles.adapter = adapterChronicles
         adapterChronicles.submitList(listChronicles)
@@ -57,7 +61,15 @@ class MainProfileFragment: Fragment() {
             findNavController().navigate(R.id.action_mainProfileFragment_to_peopleFragment)
         }
 
+        binding.aboutMeText.setOnFocusChangeListener { v, _ ->
+            when (binding.aboutMeLayout.counterTextColor) {
+                getColorStateList(requireContext(), R.color.on_primary) ->
+                    binding.aboutMeLayout.counterTextColor = getColorStateList (requireContext(), R.color.on_surface_medium_emphasis)
+                getColorStateList(requireContext(), R.color.on_surface_medium_emphasis) ->
+                    binding.aboutMeLayout.counterTextColor = getColorStateList (requireContext(), R.color.on_primary)
+
+            }
+        }
         return binding.root
     }
-
 }
