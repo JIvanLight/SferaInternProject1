@@ -14,7 +14,7 @@ class PeopleFragment: Fragment() {
 
     private val viewModel: ViewModel by viewModels(ownerProducer = ::requireParentFragment)
 
-    private lateinit var binding: FragmentPeopleBinding
+    lateinit var binding: FragmentPeopleBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,9 +23,9 @@ class PeopleFragment: Fragment() {
     ): View {
         binding = FragmentPeopleBinding.inflate(layoutInflater, container, false)
 
-        val adapterSubscribers = PeopleAdapter(viewModel)
-        binding.recyclerPeople.adapter = adapterSubscribers
-        adapterSubscribers.submitList(viewModel.dataPeople.value)
+        val adapterPeople = PeopleAdapter(viewModel)
+        binding.recyclerPeople.adapter = adapterPeople
+        adapterPeople.submitList(viewModel.dataPeople.value)
 
         return binding.root
     }
