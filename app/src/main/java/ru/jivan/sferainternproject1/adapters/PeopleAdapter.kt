@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import ru.jivan.sferainternproject1.R
 import ru.jivan.sferainternproject1.data.User
 import ru.jivan.sferainternproject1.databinding.ItemRecyclerPeopleBinding
@@ -57,6 +58,9 @@ class PeopleAdapter(private val interactionListener: UserInteractiveListener) :
             binding.textviewPeople.text = user.name
             Glide.with(context)
                 .load(user.linkAvatar)
+                .skipMemoryCache(true)
+                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .placeholder(context.resources.getDrawable(R.drawable.place_holder, context.theme))
                 .error(context.resources.getDrawable(R.drawable.place_holder, context.theme))
                 .into(binding.avatarPeople)
