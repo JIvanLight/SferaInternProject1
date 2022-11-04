@@ -1,7 +1,7 @@
 package ru.jivan.sferainternproject1.data
 
 data class User(
-    val id: Long,
+    val id: Long = 0L,
     val name: String = "",
-    val submits: List<User> = emptyList()
+    val linkAvatar: String =""
 )
