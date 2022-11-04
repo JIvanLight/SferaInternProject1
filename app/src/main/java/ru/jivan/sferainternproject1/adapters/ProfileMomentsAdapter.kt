@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.jivan.sferainternproject1.databinding.ItemRecyclerProfileMomentsBinding
 
-class ProfileMomentsAdapter() : ListAdapter<Int, ProfileMomentsAdapter.MomentsViewHolder>(DiffCallback) {
+class ProfileMomentsAdapter() :
+    ListAdapter<Int, ProfileMomentsAdapter.MomentsViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MomentsViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -18,9 +19,10 @@ class ProfileMomentsAdapter() : ListAdapter<Int, ProfileMomentsAdapter.MomentsVi
     override fun onBindViewHolder(holder: MomentsViewHolder, position: Int) {
     }
 
-    class MomentsViewHolder(binding: ItemRecyclerProfileMomentsBinding): RecyclerView.ViewHolder(binding.root)
+    class MomentsViewHolder(binding: ItemRecyclerProfileMomentsBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    private object DiffCallback: DiffUtil.ItemCallback<Int>(){
+    private object DiffCallback : DiffUtil.ItemCallback<Int>() {
 
         override fun areItemsTheSame(oldItem: Int, newItem: Int): Boolean =
             oldItem == newItem

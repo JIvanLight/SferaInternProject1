@@ -18,5 +18,6 @@
     <string name="people_appbar">People</string>
     <string name="subscribe">Subscribe</string>
     <string name="unsubscribe">Unsubscribe</string>
+    <string name="no_name" translatable="false">No name</string>
 
 </resources>

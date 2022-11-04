@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import ru.jivan.sferainternproject1.R
 import ru.jivan.sferainternproject1.data.User
 import ru.jivan.sferainternproject1.databinding.ItemRecyclerPeopleBinding
@@ -23,7 +24,10 @@ class PeopleAdapter(private val interactionListener: UserInteractiveListener) :
         holder.bind(getItem(position))
     }
 
-    class PeopleViewHolder(private val binding: ItemRecyclerPeopleBinding, interactionListener: UserInteractiveListener) : RecyclerView.ViewHolder(binding.root) {
+    class PeopleViewHolder(
+        private val binding: ItemRecyclerPeopleBinding,
+        interactionListener: UserInteractiveListener
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         private lateinit var user: User
 
@@ -35,7 +39,7 @@ class PeopleAdapter(private val interactionListener: UserInteractiveListener) :
 
         init {
             binding.subscribeTextButton.setOnClickListener {
-                when(binding.subscribeTextButton.text){
+                when (binding.subscribeTextButton.text) {
                     stateTextButtonSub -> {
                         binding.subscribeTextButton.text = stateTextButtonUnsub
                         binding.subscribeTextButton.setTextColor(stateTextColorButtonUnsub)
@@ -48,9 +52,14 @@ class PeopleAdapter(private val interactionListener: UserInteractiveListener) :
             }
         }
 
-        fun bind (user: User) {
+        fun bind(user: User) {
             this.user = user
             binding.textviewPeople.text = user.name
+            Glide.with(context)
+                .load(user.linkAvatar)
+                .placeholder(context.resources.getDrawable(R.drawable.place_holder, context.theme))
+                .error(context.resources.getDrawable(R.drawable.place_holder, context.theme))
+                .into(binding.avatarPeople)
         }
     }
 

@@ -1,6 +1,7 @@
 package ru.jivan.sferainternproject1.adapters;
 
 import android.graphics.Rect;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;

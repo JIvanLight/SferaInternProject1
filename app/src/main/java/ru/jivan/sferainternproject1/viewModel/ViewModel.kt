@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import ru.jivan.sferainternproject1.repository.InMemoryUserRepository
 import ru.jivan.sferainternproject1.repository.UserRepository
 
-class ViewModel: ViewModel(), UserInteractiveListener {
+class ViewModel : ViewModel(), UserInteractiveListener {
 
     private val repository: UserRepository = InMemoryUserRepository()
 

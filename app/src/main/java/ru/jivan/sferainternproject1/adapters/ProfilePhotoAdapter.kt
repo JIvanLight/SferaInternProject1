@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.jivan.sferainternproject1.databinding.ItemRecyclerProfilePhotoBinding
 
-class ProfilePhotoAdapter() : ListAdapter<Int, ProfilePhotoAdapter.PhotoViewHolder>(DiffCallback) {
+class ProfilePhotoAdapter : ListAdapter<Int, ProfilePhotoAdapter.PhotoViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -18,9 +18,10 @@ class ProfilePhotoAdapter() : ListAdapter<Int, ProfilePhotoAdapter.PhotoViewHold
     override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
     }
 
-    class PhotoViewHolder(binding: ItemRecyclerProfilePhotoBinding):RecyclerView.ViewHolder(binding.root)
+    class PhotoViewHolder(binding: ItemRecyclerProfilePhotoBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    private object DiffCallback:DiffUtil.ItemCallback<Int>(){
+    private object DiffCallback : DiffUtil.ItemCallback<Int>() {
 
         override fun areItemsTheSame(oldItem: Int, newItem: Int): Boolean =
             oldItem == newItem

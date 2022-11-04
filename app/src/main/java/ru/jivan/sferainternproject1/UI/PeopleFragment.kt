@@ -11,7 +11,7 @@ import ru.jivan.sferainternproject1.adapters.PeopleAdapter
 import ru.jivan.sferainternproject1.databinding.FragmentPeopleBinding
 import ru.jivan.sferainternproject1.viewModel.ViewModel
 
-class PeopleFragment: Fragment() {
+class PeopleFragment : Fragment() {
 
     private val viewModel: ViewModel by viewModels(ownerProducer = ::requireParentFragment)
 

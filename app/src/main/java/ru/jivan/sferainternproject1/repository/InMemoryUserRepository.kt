@@ -9,9 +9,9 @@ class InMemoryUserRepository : UserRepository {
     override val dataPeople = MutableLiveData(mutableListOf<User>())
 
     private val peoples
-    get() = checkNotNull(dataPeople.value){
-        "The peoples cannot be null."
-    }
+        get() = checkNotNull(dataPeople.value) {
+            "The peoples cannot be null."
+        }
 
     private val nameList = listOf(
         "Снежана Иванова",
@@ -26,16 +26,16 @@ class InMemoryUserRepository : UserRepository {
     )
 
     private val linkList = listOf(
-        "https://avavatar.ru/image/2768",
-        "https://avavatar.ru/image/13",
-        "https://avavatar.ru/image/2850",
-        "https://avavatar.ru/image/2315",
-        "https://avavatar.ru/image/1473",
-        "https://avavatar.ru/image/3021",
-        "https://avavatar.ru/image/487",
-        "https://avavatar.ru/image/592",
-        "https://avavatar.ru/image/1190",
-        "https://avavatar.ru/image/3354"
+        "https://avavatar.ru/images/original/3/Co8cw3ZCRV4Uk6Qm.jpg",
+        "https://avavatar.ru/images/original/1/dBKV5jOXviPT7ewq.jpg",
+        "https://avavatar.ru/images/original/3/nJzhDoDwyV0Kzkvx.jpg",
+        "https://avavatar.ru/images/original/3/CUfro1kBxZxkMyOQ.jpg",
+        "https://avavatar.ru/images/original/2/MucWNLAKhmOjgpFK.jpg",
+        "https://avavatar.ru/images/original/3/bX4pOZxIH6QezdDl.jpg",
+        "https://avavatar.ru/images/full/1/73yPZbXKbqyU34mB.jpg",
+        "https://avavatar.ru/images/original/1/K4ny9j76HOS0cP5s.jpg",
+        "https://avavatar.ru/images/full/2/6Kca85E1PNv6dJf3.jpg",
+        "https://avavatar.ru/images/original/4/rzSGbLvw50hgxDWq.jpg"
     )
 
     init {
@@ -55,7 +55,7 @@ class InMemoryUserRepository : UserRepository {
         return users
     }
 
-    companion object{
+    companion object {
         private const val NUMBER_OF_PEOPLE = 40
     }
 }
